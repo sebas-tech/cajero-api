@@ -16,8 +16,11 @@ api = FastAPI()
 ####################################################
 from fastapi.middleware.cors import CORSMiddleware
 origins = [     #Origenes desde donde se permitira entrar a la app
-    "http://localhost.tiangolo.com", "https://localhost.tiangolo.com",
-    "http://localhost", "http://localhost:8080",
+    "http://localhost.tiangolo.com", 
+    "https://localhost.tiangolo.com",
+    "http://localhost", 
+    "http://localhost:8080",
+    "https://cajero-front.herokuapp.com/"
 ]
 api.add_middleware(
     CORSMiddleware, allow_origins=origins,  #Agregar esos origenes al CORS
