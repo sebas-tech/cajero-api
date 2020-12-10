@@ -10,6 +10,7 @@ class TransactionInDB(BaseModel):
 
 database_transactions = []
 generator = {"id":0}
+
 def save_transaction(transaction_in_db: TransactionInDB):
     generator["id"] = generator["id"] + 1
     transaction_in_db.id_transaction = generator["id"]
